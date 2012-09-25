@@ -1,0 +1,877 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for TriggeredSendDefinition complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="TriggeredSendDefinition">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://exacttarget.com/wsdl/partnerAPI}APIObject">
+ *       &lt;sequence>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="TriggeredSendType" type="{http://exacttarget.com/wsdl/partnerAPI}TriggeredSendTypeEnum" minOccurs="0"/>
+ *         &lt;element name="TriggeredSendStatus" type="{http://exacttarget.com/wsdl/partnerAPI}TriggeredSendStatusEnum" minOccurs="0"/>
+ *         &lt;element name="Email" type="{http://exacttarget.com/wsdl/partnerAPI}Email" minOccurs="0"/>
+ *         &lt;element name="List" type="{http://exacttarget.com/wsdl/partnerAPI}List" minOccurs="0"/>
+ *         &lt;element name="HeaderContentArea" type="{http://exacttarget.com/wsdl/partnerAPI}ContentArea" minOccurs="0"/>
+ *         &lt;element name="FooterContentArea" type="{http://exacttarget.com/wsdl/partnerAPI}ContentArea" minOccurs="0"/>
+ *         &lt;element name="SendClassification" type="{http://exacttarget.com/wsdl/partnerAPI}SendClassification" minOccurs="0"/>
+ *         &lt;element name="PrivateDomain" type="{http://exacttarget.com/wsdl/partnerAPI}PrivateDomain" minOccurs="0"/>
+ *         &lt;element name="PrivateIP" type="{http://exacttarget.com/wsdl/partnerAPI}PrivateIP" minOccurs="0"/>
+ *         &lt;element name="AutoAddSubscribers" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="AutoUpdateSubscribers" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="BatchInterval" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="FromName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="FromAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="BccEmail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="EmailSubject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="DynamicEmailSubject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="IsMultipart" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsWrapped" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="AllowedSlots" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+ *         &lt;element name="NewSlotTrigger" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="SendLimit" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="SendWindowOpen" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="SendWindowClose" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="SendWindowDelete" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="SuppressTracking" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="Keyword" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="RefreshContent" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "TriggeredSendDefinition", propOrder = {
+    "name",
+    "description",
+    "triggeredSendType",
+    "triggeredSendStatus",
+    "email",
+    "list",
+    "headerContentArea",
+    "footerContentArea",
+    "sendClassification",
+    "privateDomain",
+    "privateIP",
+    "autoAddSubscribers",
+    "autoUpdateSubscribers",
+    "batchInterval",
+    "fromName",
+    "fromAddress",
+    "bccEmail",
+    "emailSubject",
+    "dynamicEmailSubject",
+    "isMultipart",
+    "isWrapped",
+    "allowedSlots",
+    "newSlotTrigger",
+    "sendLimit",
+    "sendWindowOpen",
+    "sendWindowClose",
+    "sendWindowDelete",
+    "suppressTracking",
+    "keyword",
+    "refreshContent"
+})
+public class TriggeredSendDefinition
+    extends APIObject
+{
+
+    @XmlElement(name = "Name", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String name;
+    @XmlElement(name = "Description", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String description;
+    @XmlElement(name = "TriggeredSendType", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected TriggeredSendTypeEnum triggeredSendType;
+    @XmlElement(name = "TriggeredSendStatus", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected TriggeredSendStatusEnum triggeredSendStatus;
+    @XmlElement(name = "Email", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Email email;
+    @XmlElement(name = "List", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected List list;
+    @XmlElement(name = "HeaderContentArea", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected ContentArea headerContentArea;
+    @XmlElement(name = "FooterContentArea", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected ContentArea footerContentArea;
+    @XmlElement(name = "SendClassification", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected SendClassification sendClassification;
+    @XmlElement(name = "PrivateDomain", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected PrivateDomain privateDomain;
+    @XmlElement(name = "PrivateIP", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected PrivateIP privateIP;
+    @XmlElement(name = "AutoAddSubscribers", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean autoAddSubscribers;
+    @XmlElement(name = "AutoUpdateSubscribers", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean autoUpdateSubscribers;
+    @XmlElement(name = "BatchInterval", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Integer batchInterval;
+    @XmlElement(name = "FromName", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String fromName;
+    @XmlElement(name = "FromAddress", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String fromAddress;
+    @XmlElement(name = "BccEmail", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String bccEmail;
+    @XmlElement(name = "EmailSubject", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String emailSubject;
+    @XmlElement(name = "DynamicEmailSubject", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String dynamicEmailSubject;
+    @XmlElement(name = "IsMultipart", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isMultipart;
+    @XmlElement(name = "IsWrapped", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isWrapped;
+    @XmlElement(name = "AllowedSlots", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Short allowedSlots;
+    @XmlElement(name = "NewSlotTrigger", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Integer newSlotTrigger;
+    @XmlElement(name = "SendLimit", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Integer sendLimit;
+    @XmlElement(name = "SendWindowOpen", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected XMLGregorianCalendar sendWindowOpen;
+    @XmlElement(name = "SendWindowClose", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected XMLGregorianCalendar sendWindowClose;
+    @XmlElement(name = "SendWindowDelete", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean sendWindowDelete;
+    @XmlElement(name = "SuppressTracking", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean suppressTracking;
+    @XmlElement(name = "Keyword", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String keyword;
+    @XmlElement(name = "RefreshContent", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean refreshContent;
+
+    /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the description property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
+    }
+
+    /**
+     * Gets the value of the triggeredSendType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TriggeredSendTypeEnum }
+     *     
+     */
+    public TriggeredSendTypeEnum getTriggeredSendType() {
+        return triggeredSendType;
+    }
+
+    /**
+     * Sets the value of the triggeredSendType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TriggeredSendTypeEnum }
+     *     
+     */
+    public void setTriggeredSendType(TriggeredSendTypeEnum value) {
+        this.triggeredSendType = value;
+    }
+
+    /**
+     * Gets the value of the triggeredSendStatus property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TriggeredSendStatusEnum }
+     *     
+     */
+    public TriggeredSendStatusEnum getTriggeredSendStatus() {
+        return triggeredSendStatus;
+    }
+
+    /**
+     * Sets the value of the triggeredSendStatus property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TriggeredSendStatusEnum }
+     *     
+     */
+    public void setTriggeredSendStatus(TriggeredSendStatusEnum value) {
+        this.triggeredSendStatus = value;
+    }
+
+    /**
+     * Gets the value of the email property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Email }
+     *     
+     */
+    public Email getEmail() {
+        return email;
+    }
+
+    /**
+     * Sets the value of the email property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Email }
+     *     
+     */
+    public void setEmail(Email value) {
+        this.email = value;
+    }
+
+    /**
+     * Gets the value of the list property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link List }
+     *     
+     */
+    public List getList() {
+        return list;
+    }
+
+    /**
+     * Sets the value of the list property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link List }
+     *     
+     */
+    public void setList(List value) {
+        this.list = value;
+    }
+
+    /**
+     * Gets the value of the headerContentArea property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ContentArea }
+     *     
+     */
+    public ContentArea getHeaderContentArea() {
+        return headerContentArea;
+    }
+
+    /**
+     * Sets the value of the headerContentArea property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ContentArea }
+     *     
+     */
+    public void setHeaderContentArea(ContentArea value) {
+        this.headerContentArea = value;
+    }
+
+    /**
+     * Gets the value of the footerContentArea property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ContentArea }
+     *     
+     */
+    public ContentArea getFooterContentArea() {
+        return footerContentArea;
+    }
+
+    /**
+     * Sets the value of the footerContentArea property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ContentArea }
+     *     
+     */
+    public void setFooterContentArea(ContentArea value) {
+        this.footerContentArea = value;
+    }
+
+    /**
+     * Gets the value of the sendClassification property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SendClassification }
+     *     
+     */
+    public SendClassification getSendClassification() {
+        return sendClassification;
+    }
+
+    /**
+     * Sets the value of the sendClassification property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SendClassification }
+     *     
+     */
+    public void setSendClassification(SendClassification value) {
+        this.sendClassification = value;
+    }
+
+    /**
+     * Gets the value of the privateDomain property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PrivateDomain }
+     *     
+     */
+    public PrivateDomain getPrivateDomain() {
+        return privateDomain;
+    }
+
+    /**
+     * Sets the value of the privateDomain property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PrivateDomain }
+     *     
+     */
+    public void setPrivateDomain(PrivateDomain value) {
+        this.privateDomain = value;
+    }
+
+    /**
+     * Gets the value of the privateIP property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PrivateIP }
+     *     
+     */
+    public PrivateIP getPrivateIP() {
+        return privateIP;
+    }
+
+    /**
+     * Sets the value of the privateIP property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PrivateIP }
+     *     
+     */
+    public void setPrivateIP(PrivateIP value) {
+        this.privateIP = value;
+    }
+
+    /**
+     * Gets the value of the autoAddSubscribers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isAutoAddSubscribers() {
+        return autoAddSubscribers;
+    }
+
+    /**
+     * Sets the value of the autoAddSubscribers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAutoAddSubscribers(Boolean value) {
+        this.autoAddSubscribers = value;
+    }
+
+    /**
+     * Gets the value of the autoUpdateSubscribers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isAutoUpdateSubscribers() {
+        return autoUpdateSubscribers;
+    }
+
+    /**
+     * Sets the value of the autoUpdateSubscribers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAutoUpdateSubscribers(Boolean value) {
+        this.autoUpdateSubscribers = value;
+    }
+
+    /**
+     * Gets the value of the batchInterval property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getBatchInterval() {
+        return batchInterval;
+    }
+
+    /**
+     * Sets the value of the batchInterval property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setBatchInterval(Integer value) {
+        this.batchInterval = value;
+    }
+
+    /**
+     * Gets the value of the fromName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFromName() {
+        return fromName;
+    }
+
+    /**
+     * Sets the value of the fromName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFromName(String value) {
+        this.fromName = value;
+    }
+
+    /**
+     * Gets the value of the fromAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFromAddress() {
+        return fromAddress;
+    }
+
+    /**
+     * Sets the value of the fromAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFromAddress(String value) {
+        this.fromAddress = value;
+    }
+
+    /**
+     * Gets the value of the bccEmail property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBccEmail() {
+        return bccEmail;
+    }
+
+    /**
+     * Sets the value of the bccEmail property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBccEmail(String value) {
+        this.bccEmail = value;
+    }
+
+    /**
+     * Gets the value of the emailSubject property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmailSubject() {
+        return emailSubject;
+    }
+
+    /**
+     * Sets the value of the emailSubject property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmailSubject(String value) {
+        this.emailSubject = value;
+    }
+
+    /**
+     * Gets the value of the dynamicEmailSubject property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDynamicEmailSubject() {
+        return dynamicEmailSubject;
+    }
+
+    /**
+     * Sets the value of the dynamicEmailSubject property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDynamicEmailSubject(String value) {
+        this.dynamicEmailSubject = value;
+    }
+
+    /**
+     * Gets the value of the isMultipart property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsMultipart() {
+        return isMultipart;
+    }
+
+    /**
+     * Sets the value of the isMultipart property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsMultipart(Boolean value) {
+        this.isMultipart = value;
+    }
+
+    /**
+     * Gets the value of the isWrapped property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsWrapped() {
+        return isWrapped;
+    }
+
+    /**
+     * Sets the value of the isWrapped property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsWrapped(Boolean value) {
+        this.isWrapped = value;
+    }
+
+    /**
+     * Gets the value of the allowedSlots property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Short }
+     *     
+     */
+    public Short getAllowedSlots() {
+        return allowedSlots;
+    }
+
+    /**
+     * Sets the value of the allowedSlots property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Short }
+     *     
+     */
+    public void setAllowedSlots(Short value) {
+        this.allowedSlots = value;
+    }
+
+    /**
+     * Gets the value of the newSlotTrigger property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getNewSlotTrigger() {
+        return newSlotTrigger;
+    }
+
+    /**
+     * Sets the value of the newSlotTrigger property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setNewSlotTrigger(Integer value) {
+        this.newSlotTrigger = value;
+    }
+
+    /**
+     * Gets the value of the sendLimit property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getSendLimit() {
+        return sendLimit;
+    }
+
+    /**
+     * Sets the value of the sendLimit property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setSendLimit(Integer value) {
+        this.sendLimit = value;
+    }
+
+    /**
+     * Gets the value of the sendWindowOpen property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getSendWindowOpen() {
+        return sendWindowOpen;
+    }
+
+    /**
+     * Sets the value of the sendWindowOpen property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setSendWindowOpen(XMLGregorianCalendar value) {
+        this.sendWindowOpen = value;
+    }
+
+    /**
+     * Gets the value of the sendWindowClose property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getSendWindowClose() {
+        return sendWindowClose;
+    }
+
+    /**
+     * Sets the value of the sendWindowClose property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setSendWindowClose(XMLGregorianCalendar value) {
+        this.sendWindowClose = value;
+    }
+
+    /**
+     * Gets the value of the sendWindowDelete property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSendWindowDelete() {
+        return sendWindowDelete;
+    }
+
+    /**
+     * Sets the value of the sendWindowDelete property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSendWindowDelete(Boolean value) {
+        this.sendWindowDelete = value;
+    }
+
+    /**
+     * Gets the value of the suppressTracking property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSuppressTracking() {
+        return suppressTracking;
+    }
+
+    /**
+     * Sets the value of the suppressTracking property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSuppressTracking(Boolean value) {
+        this.suppressTracking = value;
+    }
+
+    /**
+     * Gets the value of the keyword property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getKeyword() {
+        return keyword;
+    }
+
+    /**
+     * Sets the value of the keyword property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setKeyword(String value) {
+        this.keyword = value;
+    }
+
+    /**
+     * Gets the value of the refreshContent property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isRefreshContent() {
+        return refreshContent;
+    }
+
+    /**
+     * Sets the value of the refreshContent property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setRefreshContent(Boolean value) {
+        this.refreshContent = value;
+    }
+
+}

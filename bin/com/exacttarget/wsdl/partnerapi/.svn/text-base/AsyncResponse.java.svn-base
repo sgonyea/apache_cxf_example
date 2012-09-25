@@ -1,0 +1,90 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for AsyncResponse complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="AsyncResponse">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="ResponseType" type="{http://exacttarget.com/wsdl/partnerAPI}AsyncResponseType"/>
+ *         &lt;element name="ResponseAddress" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AsyncResponse", propOrder = {
+    "responseType",
+    "responseAddress"
+})
+public class AsyncResponse {
+
+    @XmlElement(name = "ResponseType", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected AsyncResponseType responseType;
+    @XmlElement(name = "ResponseAddress", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected String responseAddress;
+
+    /**
+     * Gets the value of the responseType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AsyncResponseType }
+     *     
+     */
+    public AsyncResponseType getResponseType() {
+        return responseType;
+    }
+
+    /**
+     * Sets the value of the responseType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AsyncResponseType }
+     *     
+     */
+    public void setResponseType(AsyncResponseType value) {
+        this.responseType = value;
+    }
+
+    /**
+     * Gets the value of the responseAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getResponseAddress() {
+        return responseAddress;
+    }
+
+    /**
+     * Sets the value of the responseAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setResponseAddress(String value) {
+        this.responseAddress = value;
+    }
+
+}

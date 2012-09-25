@@ -1,0 +1,1025 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.namespace.QName;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the com.exacttarget.wsdl.partnerapi package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _AccountSubscription_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Subscription");
+    private final static QName _SendSentDate_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "SentDate");
+    private final static QName _SendNumberDelivered_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NumberDelivered");
+    private final static QName _SendNumberSent_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NumberSent");
+    private final static QName _UserAccessName_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Name");
+    private final static QName _APIObjectObjectID_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "ObjectID");
+    private final static QName _APIObjectPartnerKey_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "PartnerKey");
+    private final static QName _APIObjectModifiedDate_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "ModifiedDate");
+    private final static QName _List_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "List");
+    private final static QName _TriggeredSend_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "TriggeredSend");
+    private final static QName _PrivateDomain_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "PrivateDomain");
+    private final static QName _TriggeredSendCreateResult_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "TriggeredSendCreateResult");
+    private final static QName _CreateOptions_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "CreateOptions");
+    private final static QName _UpdateOptions_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "UpdateOptions");
+    private final static QName _Send_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Send");
+    private final static QName _PrivateIP_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "PrivateIP");
+    private final static QName _TriggeredSendDefinition_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "TriggeredSendDefinition");
+    private final static QName _SubscriberResult_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "SubscriberResult");
+    private final static QName _Subscriber_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Subscriber");
+    private final static QName _Group_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Group");
+    private final static QName _SendClassification_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "SendClassification");
+    private final static QName _SubscriberList_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "SubscriberList");
+    private final static QName _DeleteOptions_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "DeleteOptions");
+    private final static QName _AccountUserAccountUserID_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "AccountUserID");
+    private final static QName _SubscriptionNotificationTitle_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NotificationTitle");
+    private final static QName _SubscriptionSubscriptionID_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "SubscriptionID");
+    private final static QName _SubscriptionForAccounting_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "ForAccounting");
+    private final static QName _SubscriptionNotificationExpDate_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NotificationExpDate");
+    private final static QName _SubscriptionNotificationMessage_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NotificationMessage");
+    private final static QName _SubscriptionNotificationFlag_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "NotificationFlag");
+    private final static QName _SubscriptionNotes_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "Notes");
+    private final static QName _AccountDataItemAccountType_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "AccountType");
+    private final static QName _AccountDataItemPrivateLabelID_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "PrivateLabelID");
+    private final static QName _AccountDataItemBrandID_QNAME = new QName("http://exacttarget.com/wsdl/partnerAPI", "BrandID");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.exacttarget.wsdl.partnerapi
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link FilterPart }
+     * 
+     */
+    public FilterPart createFilterPart() {
+        return new FilterPart();
+    }
+
+    /**
+     * Create an instance of {@link CreateRequest }
+     * 
+     */
+    public CreateRequest createCreateRequest() {
+        return new CreateRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteRequest }
+     * 
+     */
+    public DeleteRequest createDeleteRequest() {
+        return new DeleteRequest();
+    }
+
+    /**
+     * Create an instance of {@link CreateResponse }
+     * 
+     */
+    public CreateResponse createCreateResponse() {
+        return new CreateResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateRequest }
+     * 
+     */
+    public UpdateRequest createUpdateRequest() {
+        return new UpdateRequest();
+    }
+
+    /**
+     * Create an instance of {@link ClickEvent }
+     * 
+     */
+    public ClickEvent createClickEvent() {
+        return new ClickEvent();
+    }
+
+    /**
+     * Create an instance of {@link UserMap }
+     * 
+     */
+    public UserMap createUserMap() {
+        return new UserMap();
+    }
+
+    /**
+     * Create an instance of {@link QueryObject }
+     * 
+     */
+    public QueryObject createQueryObject() {
+        return new QueryObject();
+    }
+
+    /**
+     * Create an instance of {@link Owner }
+     * 
+     */
+    public Owner createOwner() {
+        return new Owner();
+    }
+
+    /**
+     * Create an instance of {@link Account }
+     * 
+     */
+    public Account createAccount() {
+        return new Account();
+    }
+
+    /**
+     * Create an instance of {@link PrivateIP }
+     * 
+     */
+    public PrivateIP createPrivateIP() {
+        return new PrivateIP();
+    }
+
+    /**
+     * Create an instance of {@link APIProperty }
+     * 
+     */
+    public APIProperty createAPIProperty() {
+        return new APIProperty();
+    }
+
+    /**
+     * Create an instance of {@link QueryResponseMsg }
+     * 
+     */
+    public QueryResponseMsg createQueryResponseMsg() {
+        return new QueryResponseMsg();
+    }
+
+    /**
+     * Create an instance of {@link SendClassification }
+     * 
+     */
+    public SendClassification createSendClassification() {
+        return new SendClassification();
+    }
+
+    /**
+     * Create an instance of {@link List }
+     * 
+     */
+    public List createList() {
+        return new List();
+    }
+
+    /**
+     * Create an instance of {@link TriggeredSend }
+     * 
+     */
+    public TriggeredSend createTriggeredSend() {
+        return new TriggeredSend();
+    }
+
+    /**
+     * Create an instance of {@link UserAccess }
+     * 
+     */
+    public UserAccess createUserAccess() {
+        return new UserAccess();
+    }
+
+    /**
+     * Create an instance of {@link UnsubEvent }
+     * 
+     */
+    public UnsubEvent createUnsubEvent() {
+        return new UnsubEvent();
+    }
+
+    /**
+     * Create an instance of {@link ObjectDefinitionRequest }
+     * 
+     */
+    public ObjectDefinitionRequest createObjectDefinitionRequest() {
+        return new ObjectDefinitionRequest();
+    }
+
+    /**
+     * Create an instance of {@link PrivateLabel }
+     * 
+     */
+    public PrivateLabel createPrivateLabel() {
+        return new PrivateLabel();
+    }
+
+    /**
+     * Create an instance of {@link AccountUser }
+     * 
+     */
+    public AccountUser createAccountUser() {
+        return new AccountUser();
+    }
+
+    /**
+     * Create an instance of {@link DeleteResult }
+     * 
+     */
+    public DeleteResult createDeleteResult() {
+        return new DeleteResult();
+    }
+
+    /**
+     * Create an instance of {@link Email }
+     * 
+     */
+    public Email createEmail() {
+        return new Email();
+    }
+
+    /**
+     * Create an instance of {@link BounceEvent }
+     * 
+     */
+    public BounceEvent createBounceEvent() {
+        return new BounceEvent();
+    }
+
+    /**
+     * Create an instance of {@link ObjectDefinition }
+     * 
+     */
+    public ObjectDefinition createObjectDefinition() {
+        return new ObjectDefinition();
+    }
+
+    /**
+     * Create an instance of {@link Send }
+     * 
+     */
+    public Send createSend() {
+        return new Send();
+    }
+
+    /**
+     * Create an instance of {@link TrackingEvent }
+     * 
+     */
+    public TrackingEvent createTrackingEvent() {
+        return new TrackingEvent();
+    }
+
+    /**
+     * Create an instance of {@link ContainerID }
+     * 
+     */
+    public ContainerID createContainerID() {
+        return new ContainerID();
+    }
+
+    /**
+     * Create an instance of {@link PropertyDefinition }
+     * 
+     */
+    public PropertyDefinition createPropertyDefinition() {
+        return new PropertyDefinition();
+    }
+
+    /**
+     * Create an instance of {@link Query }
+     * 
+     */
+    public Query createQuery() {
+        return new Query();
+    }
+
+    /**
+     * Create an instance of {@link TriggeredSendSummary }
+     * 
+     */
+    public TriggeredSendSummary createTriggeredSendSummary() {
+        return new TriggeredSendSummary();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberList }
+     * 
+     */
+    public SubscriberList createSubscriberList() {
+        return new SubscriberList();
+    }
+
+    /**
+     * Create an instance of {@link ForwardedEmailOptInEvent }
+     * 
+     */
+    public ForwardedEmailOptInEvent createForwardedEmailOptInEvent() {
+        return new ForwardedEmailOptInEvent();
+    }
+
+    /**
+     * Create an instance of {@link Folder }
+     * 
+     */
+    public Folder createFolder() {
+        return new Folder();
+    }
+
+    /**
+     * Create an instance of {@link TriggeredSendDefinition }
+     * 
+     */
+    public TriggeredSendDefinition createTriggeredSendDefinition() {
+        return new TriggeredSendDefinition();
+    }
+
+    /**
+     * Create an instance of {@link NotSentEvent }
+     * 
+     */
+    public NotSentEvent createNotSentEvent() {
+        return new NotSentEvent();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveResponseMsg }
+     * 
+     */
+    public RetrieveResponseMsg createRetrieveResponseMsg() {
+        return new RetrieveResponseMsg();
+    }
+
+    /**
+     * Create an instance of {@link TriggeredSendCreateResult }
+     * 
+     */
+    public TriggeredSendCreateResult createTriggeredSendCreateResult() {
+        return new TriggeredSendCreateResult();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSendResult }
+     * 
+     */
+    public SubscriberSendResult createSubscriberSendResult() {
+        return new SubscriberSendResult();
+    }
+
+    /**
+     * Create an instance of {@link ExecuteRequestMsg }
+     * 
+     */
+    public ExecuteRequestMsg createExecuteRequestMsg() {
+        return new ExecuteRequestMsg();
+    }
+
+    /**
+     * Create an instance of {@link AccountDataItem }
+     * 
+     */
+    public AccountDataItem createAccountDataItem() {
+        return new AccountDataItem();
+    }
+
+    /**
+     * Create an instance of {@link SimpleFilterPart }
+     * 
+     */
+    public SimpleFilterPart createSimpleFilterPart() {
+        return new SimpleFilterPart();
+    }
+
+    /**
+     * Create an instance of {@link Link }
+     * 
+     */
+    public Link createLink() {
+        return new Link();
+    }
+
+    /**
+     * Create an instance of {@link VersionInfoResponseMsg }
+     * 
+     */
+    public VersionInfoResponseMsg createVersionInfoResponseMsg() {
+        return new VersionInfoResponseMsg();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResponse }
+     * 
+     */
+    public UpdateResponse createUpdateResponse() {
+        return new UpdateResponse();
+    }
+
+    /**
+     * Create an instance of {@link DefinitionRequestMsg }
+     * 
+     */
+    public DefinitionRequestMsg createDefinitionRequestMsg() {
+        return new DefinitionRequestMsg();
+    }
+
+    /**
+     * Create an instance of {@link ExecuteResponse }
+     * 
+     */
+    public ExecuteResponse createExecuteResponse() {
+        return new ExecuteResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOptions }
+     * 
+     */
+    public DeleteOptions createDeleteOptions() {
+        return new DeleteOptions();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveRequest }
+     * 
+     */
+    public RetrieveRequest createRetrieveRequest() {
+        return new RetrieveRequest();
+    }
+
+    /**
+     * Create an instance of {@link SurveyEvent }
+     * 
+     */
+    public SurveyEvent createSurveyEvent() {
+        return new SurveyEvent();
+    }
+
+    /**
+     * Create an instance of {@link QueryRequestMsg }
+     * 
+     */
+    public QueryRequestMsg createQueryRequestMsg() {
+        return new QueryRequestMsg();
+    }
+
+    /**
+     * Create an instance of {@link RetrieveRequestMsg }
+     * 
+     */
+    public RetrieveRequestMsg createRetrieveRequestMsg() {
+        return new RetrieveRequestMsg();
+    }
+
+    /**
+     * Create an instance of {@link ComplexFilterPart }
+     * 
+     */
+    public ComplexFilterPart createComplexFilterPart() {
+        return new ComplexFilterPart();
+    }
+
+    /**
+     * Create an instance of {@link OpenEvent }
+     * 
+     */
+    public OpenEvent createOpenEvent() {
+        return new OpenEvent();
+    }
+
+    /**
+     * Create an instance of {@link ForwardedEmailEvent }
+     * 
+     */
+    public ForwardedEmailEvent createForwardedEmailEvent() {
+        return new ForwardedEmailEvent();
+    }
+
+    /**
+     * Create an instance of {@link APIObject }
+     * 
+     */
+    public APIObject createAPIObject() {
+        return new APIObject();
+    }
+
+    /**
+     * Create an instance of {@link AsyncResponse }
+     * 
+     */
+    public AsyncResponse createAsyncResponse() {
+        return new AsyncResponse();
+    }
+
+    /**
+     * Create an instance of {@link ContentArea }
+     * 
+     */
+    public ContentArea createContentArea() {
+        return new ContentArea();
+    }
+
+    /**
+     * Create an instance of {@link UpdateOptions }
+     * 
+     */
+    public UpdateOptions createUpdateOptions() {
+        return new UpdateOptions();
+    }
+
+    /**
+     * Create an instance of {@link Group }
+     * 
+     */
+    public Group createGroup() {
+        return new Group();
+    }
+
+    /**
+     * Create an instance of {@link QueryRequest }
+     * 
+     */
+    public QueryRequest createQueryRequest() {
+        return new QueryRequest();
+    }
+
+    /**
+     * Create an instance of {@link ClientID }
+     * 
+     */
+    public ClientID createClientID() {
+        return new ClientID();
+    }
+
+    /**
+     * Create an instance of {@link SendSummary }
+     * 
+     */
+    public SendSummary createSendSummary() {
+        return new SendSummary();
+    }
+
+    /**
+     * Create an instance of {@link DefinitionResponseMsg }
+     * 
+     */
+    public DefinitionResponseMsg createDefinitionResponseMsg() {
+        return new DefinitionResponseMsg();
+    }
+
+    /**
+     * Create an instance of {@link Attribute }
+     * 
+     */
+    public Attribute createAttribute() {
+        return new Attribute();
+    }
+
+    /**
+     * Create an instance of {@link Subscriber }
+     * 
+     */
+    public Subscriber createSubscriber() {
+        return new Subscriber();
+    }
+
+    /**
+     * Create an instance of {@link SentEvent }
+     * 
+     */
+    public SentEvent createSentEvent() {
+        return new SentEvent();
+    }
+
+    /**
+     * Create an instance of {@link ExecuteResponseMsg }
+     * 
+     */
+    public ExecuteResponseMsg createExecuteResponseMsg() {
+        return new ExecuteResponseMsg();
+    }
+
+    /**
+     * Create an instance of {@link ExecuteRequest }
+     * 
+     */
+    public ExecuteRequest createExecuteRequest() {
+        return new ExecuteRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteResponse }
+     * 
+     */
+    public DeleteResponse createDeleteResponse() {
+        return new DeleteResponse();
+    }
+
+    /**
+     * Create an instance of {@link Subscription }
+     * 
+     */
+    public Subscription createSubscription() {
+        return new Subscription();
+    }
+
+    /**
+     * Create an instance of {@link AttributeMap }
+     * 
+     */
+    public AttributeMap createAttributeMap() {
+        return new AttributeMap();
+    }
+
+    /**
+     * Create an instance of {@link CreateOptions }
+     * 
+     */
+    public CreateOptions createCreateOptions() {
+        return new CreateOptions();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResult }
+     * 
+     */
+    public UpdateResult createUpdateResult() {
+        return new UpdateResult();
+    }
+
+    /**
+     * Create an instance of {@link PrivateDomain }
+     * 
+     */
+    public PrivateDomain createPrivateDomain() {
+        return new PrivateDomain();
+    }
+
+    /**
+     * Create an instance of {@link CreateResult }
+     * 
+     */
+    public CreateResult createCreateResult() {
+        return new CreateResult();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberResult }
+     * 
+     */
+    public SubscriberResult createSubscriberResult() {
+        return new SubscriberResult();
+    }
+
+    /**
+     * Create an instance of {@link VersionInfoResponse }
+     * 
+     */
+    public VersionInfoResponse createVersionInfoResponse() {
+        return new VersionInfoResponse();
+    }
+
+    /**
+     * Create an instance of {@link BusinessRule }
+     * 
+     */
+    public BusinessRule createBusinessRule() {
+        return new BusinessRule();
+    }
+
+    /**
+     * Create an instance of {@link VersionInfoRequestMsg }
+     * 
+     */
+    public VersionInfoRequestMsg createVersionInfoRequestMsg() {
+        return new VersionInfoRequestMsg();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Subscription }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Subscription", scope = Account.class)
+    public JAXBElement<Subscription> createAccountSubscription(Subscription value) {
+        return new JAXBElement<Subscription>(_AccountSubscription_QNAME, Subscription.class, Account.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "SentDate", scope = Send.class)
+    public JAXBElement<XMLGregorianCalendar> createSendSentDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SendSentDate_QNAME, XMLGregorianCalendar.class, Send.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NumberDelivered", scope = Send.class)
+    public JAXBElement<Integer> createSendNumberDelivered(Integer value) {
+        return new JAXBElement<Integer>(_SendNumberDelivered_QNAME, Integer.class, Send.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NumberSent", scope = Send.class)
+    public JAXBElement<Integer> createSendNumberSent(Integer value) {
+        return new JAXBElement<Integer>(_SendNumberSent_QNAME, Integer.class, Send.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Name", scope = UserAccess.class)
+    public JAXBElement<String> createUserAccessName(String value) {
+        return new JAXBElement<String>(_UserAccessName_QNAME, String.class, UserAccess.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "ObjectID", scope = APIObject.class)
+    public JAXBElement<String> createAPIObjectObjectID(String value) {
+        return new JAXBElement<String>(_APIObjectObjectID_QNAME, String.class, APIObject.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "PartnerKey", scope = APIObject.class)
+    public JAXBElement<String> createAPIObjectPartnerKey(String value) {
+        return new JAXBElement<String>(_APIObjectPartnerKey_QNAME, String.class, APIObject.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "ModifiedDate", scope = APIObject.class)
+    public JAXBElement<XMLGregorianCalendar> createAPIObjectModifiedDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_APIObjectModifiedDate_QNAME, XMLGregorianCalendar.class, APIObject.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "PartnerKey", scope = CreateResult.class)
+    public JAXBElement<String> createCreateResultPartnerKey(String value) {
+        return new JAXBElement<String>(_APIObjectPartnerKey_QNAME, String.class, CreateResult.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link List }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "List")
+    public JAXBElement<List> createList(List value) {
+        return new JAXBElement<List>(_List_QNAME, List.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TriggeredSend }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "TriggeredSend")
+    public JAXBElement<TriggeredSend> createTriggeredSend(TriggeredSend value) {
+        return new JAXBElement<TriggeredSend>(_TriggeredSend_QNAME, TriggeredSend.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PrivateDomain }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "PrivateDomain")
+    public JAXBElement<PrivateDomain> createPrivateDomain(PrivateDomain value) {
+        return new JAXBElement<PrivateDomain>(_PrivateDomain_QNAME, PrivateDomain.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TriggeredSendCreateResult }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "TriggeredSendCreateResult")
+    public JAXBElement<TriggeredSendCreateResult> createTriggeredSendCreateResult(TriggeredSendCreateResult value) {
+        return new JAXBElement<TriggeredSendCreateResult>(_TriggeredSendCreateResult_QNAME, TriggeredSendCreateResult.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateOptions }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "CreateOptions")
+    public JAXBElement<CreateOptions> createCreateOptions(CreateOptions value) {
+        return new JAXBElement<CreateOptions>(_CreateOptions_QNAME, CreateOptions.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOptions }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "UpdateOptions")
+    public JAXBElement<UpdateOptions> createUpdateOptions(UpdateOptions value) {
+        return new JAXBElement<UpdateOptions>(_UpdateOptions_QNAME, UpdateOptions.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Send }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Send")
+    public JAXBElement<Send> createSend(Send value) {
+        return new JAXBElement<Send>(_Send_QNAME, Send.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PrivateIP }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "PrivateIP")
+    public JAXBElement<PrivateIP> createPrivateIP(PrivateIP value) {
+        return new JAXBElement<PrivateIP>(_PrivateIP_QNAME, PrivateIP.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TriggeredSendDefinition }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "TriggeredSendDefinition")
+    public JAXBElement<TriggeredSendDefinition> createTriggeredSendDefinition(TriggeredSendDefinition value) {
+        return new JAXBElement<TriggeredSendDefinition>(_TriggeredSendDefinition_QNAME, TriggeredSendDefinition.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriberResult }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "SubscriberResult")
+    public JAXBElement<SubscriberResult> createSubscriberResult(SubscriberResult value) {
+        return new JAXBElement<SubscriberResult>(_SubscriberResult_QNAME, SubscriberResult.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Subscriber }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Subscriber")
+    public JAXBElement<Subscriber> createSubscriber(Subscriber value) {
+        return new JAXBElement<Subscriber>(_Subscriber_QNAME, Subscriber.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Group }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Group")
+    public JAXBElement<Group> createGroup(Group value) {
+        return new JAXBElement<Group>(_Group_QNAME, Group.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SendClassification }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "SendClassification")
+    public JAXBElement<SendClassification> createSendClassification(SendClassification value) {
+        return new JAXBElement<SendClassification>(_SendClassification_QNAME, SendClassification.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubscriberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "SubscriberList")
+    public JAXBElement<SubscriberList> createSubscriberList(SubscriberList value) {
+        return new JAXBElement<SubscriberList>(_SubscriberList_QNAME, SubscriberList.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteOptions }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "DeleteOptions")
+    public JAXBElement<DeleteOptions> createDeleteOptions(DeleteOptions value) {
+        return new JAXBElement<DeleteOptions>(_DeleteOptions_QNAME, DeleteOptions.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "AccountUserID", scope = AccountUser.class)
+    public JAXBElement<Integer> createAccountUserAccountUserID(Integer value) {
+        return new JAXBElement<Integer>(_AccountUserAccountUserID_QNAME, Integer.class, AccountUser.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NotificationTitle", scope = Subscription.class)
+    public JAXBElement<String> createSubscriptionNotificationTitle(String value) {
+        return new JAXBElement<String>(_SubscriptionNotificationTitle_QNAME, String.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "SubscriptionID", scope = Subscription.class)
+    public JAXBElement<Integer> createSubscriptionSubscriptionID(Integer value) {
+        return new JAXBElement<Integer>(_SubscriptionSubscriptionID_QNAME, Integer.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "ForAccounting", scope = Subscription.class)
+    public JAXBElement<String> createSubscriptionForAccounting(String value) {
+        return new JAXBElement<String>(_SubscriptionForAccounting_QNAME, String.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NotificationExpDate", scope = Subscription.class)
+    public JAXBElement<XMLGregorianCalendar> createSubscriptionNotificationExpDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SubscriptionNotificationExpDate_QNAME, XMLGregorianCalendar.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NotificationMessage", scope = Subscription.class)
+    public JAXBElement<String> createSubscriptionNotificationMessage(String value) {
+        return new JAXBElement<String>(_SubscriptionNotificationMessage_QNAME, String.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "NotificationFlag", scope = Subscription.class)
+    public JAXBElement<String> createSubscriptionNotificationFlag(String value) {
+        return new JAXBElement<String>(_SubscriptionNotificationFlag_QNAME, String.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "Notes", scope = Subscription.class)
+    public JAXBElement<String> createSubscriptionNotes(String value) {
+        return new JAXBElement<String>(_SubscriptionNotes_QNAME, String.class, Subscription.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "AccountType", scope = AccountDataItem.class)
+    public JAXBElement<Integer> createAccountDataItemAccountType(Integer value) {
+        return new JAXBElement<Integer>(_AccountDataItemAccountType_QNAME, Integer.class, AccountDataItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "PrivateLabelID", scope = AccountDataItem.class)
+    public JAXBElement<Integer> createAccountDataItemPrivateLabelID(Integer value) {
+        return new JAXBElement<Integer>(_AccountDataItemPrivateLabelID_QNAME, Integer.class, AccountDataItem.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://exacttarget.com/wsdl/partnerAPI", name = "BrandID", scope = AccountDataItem.class)
+    public JAXBElement<Integer> createAccountDataItemBrandID(Integer value) {
+        return new JAXBElement<Integer>(_AccountDataItemBrandID_QNAME, Integer.class, AccountDataItem.class, value);
+    }
+
+}

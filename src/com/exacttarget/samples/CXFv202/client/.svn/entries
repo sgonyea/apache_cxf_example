@@ -1,0 +1,52 @@
+8
+
+dir
+70
+http://exacttarget.unfuddle.com/svn/exacttarget/code/java/Samples_CXFv202/src/com/exacttarget/samples/CXFv202/client
+http://exacttarget.unfuddle.com/svn/exacttarget
+
+
+
+2007-10-10T15:02:09.564990Z
+70
+exacttarget_egfesser
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8f707c65-5e2c-0410-839c-0b5bac6566ab
+
+ClientPasswordHandler.java
+file
+
+
+
+
+2007-10-18T17:51:43.969875Z
+34c1bb81182ffd2ae45c1ef810aa170b
+2007-10-10T15:02:09.564990Z
+70
+exacttarget_egfesser
+
+ClientTest.java
+file
+
+
+
+
+2007-10-18T17:51:43.969875Z
+15f5d78b157a9b362b8c1f56d12847c6
+2007-10-10T15:02:09.564990Z
+70
+exacttarget_egfesser
+

@@ -1,0 +1,153 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for UpdateOptions complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="UpdateOptions">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Client" type="{http://exacttarget.com/wsdl/partnerAPI}ClientID" minOccurs="0"/>
+ *         &lt;element name="SendResponseTo" type="{http://exacttarget.com/wsdl/partnerAPI}AsyncResponse" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Container" type="{http://exacttarget.com/wsdl/partnerAPI}ContainerID" minOccurs="0"/>
+ *         &lt;element name="Action" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "UpdateOptions", propOrder = {
+    "client",
+    "sendResponseTo",
+    "container",
+    "action"
+})
+public class UpdateOptions {
+
+    @XmlElement(name = "Client", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected ClientID client;
+    @XmlElement(name = "SendResponseTo", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected List<AsyncResponse> sendResponseTo;
+    @XmlElement(name = "Container", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected ContainerID container;
+    @XmlElement(name = "Action", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String action;
+
+    /**
+     * Gets the value of the client property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ClientID }
+     *     
+     */
+    public ClientID getClient() {
+        return client;
+    }
+
+    /**
+     * Sets the value of the client property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ClientID }
+     *     
+     */
+    public void setClient(ClientID value) {
+        this.client = value;
+    }
+
+    /**
+     * Gets the value of the sendResponseTo property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the sendResponseTo property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSendResponseTo().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link AsyncResponse }
+     * 
+     * 
+     */
+    public List<AsyncResponse> getSendResponseTo() {
+        if (sendResponseTo == null) {
+            sendResponseTo = new ArrayList<AsyncResponse>();
+        }
+        return this.sendResponseTo;
+    }
+
+    /**
+     * Gets the value of the container property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ContainerID }
+     *     
+     */
+    public ContainerID getContainer() {
+        return container;
+    }
+
+    /**
+     * Sets the value of the container property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ContainerID }
+     *     
+     */
+    public void setContainer(ContainerID value) {
+        this.container = value;
+    }
+
+    /**
+     * Gets the value of the action property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAction() {
+        return action;
+    }
+
+    /**
+     * Sets the value of the action property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAction(String value) {
+        this.action = value;
+    }
+
+}

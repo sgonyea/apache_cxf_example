@@ -1,0 +1,382 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for PropertyDefinition complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="PropertyDefinition">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="DataType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="IsCreatable" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsUpdatable" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsRetrievable" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsQueryable" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsFilterable" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsPartnerProperty" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsAccountProperty" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="PartnerMap" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="AttributeMaps" type="{http://exacttarget.com/wsdl/partnerAPI}AttributeMap" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Markups" type="{http://exacttarget.com/wsdl/partnerAPI}APIProperty" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PropertyDefinition", propOrder = {
+    "name",
+    "dataType",
+    "isCreatable",
+    "isUpdatable",
+    "isRetrievable",
+    "isQueryable",
+    "isFilterable",
+    "isPartnerProperty",
+    "isAccountProperty",
+    "partnerMap",
+    "attributeMaps",
+    "markups"
+})
+public class PropertyDefinition {
+
+    @XmlElement(name = "Name", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String name;
+    @XmlElement(name = "DataType", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String dataType;
+    @XmlElement(name = "IsCreatable", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isCreatable;
+    @XmlElement(name = "IsUpdatable", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isUpdatable;
+    @XmlElement(name = "IsRetrievable", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isRetrievable;
+    @XmlElement(name = "IsQueryable", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isQueryable;
+    @XmlElement(name = "IsFilterable", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isFilterable;
+    @XmlElement(name = "IsPartnerProperty", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isPartnerProperty;
+    @XmlElement(name = "IsAccountProperty", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Boolean isAccountProperty;
+    @XmlElement(name = "PartnerMap", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String partnerMap;
+    @XmlElement(name = "AttributeMaps", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected List<AttributeMap> attributeMaps;
+    @XmlElement(name = "Markups", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected List<APIProperty> markups;
+
+    /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the dataType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDataType() {
+        return dataType;
+    }
+
+    /**
+     * Sets the value of the dataType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDataType(String value) {
+        this.dataType = value;
+    }
+
+    /**
+     * Gets the value of the isCreatable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsCreatable() {
+        return isCreatable;
+    }
+
+    /**
+     * Sets the value of the isCreatable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsCreatable(Boolean value) {
+        this.isCreatable = value;
+    }
+
+    /**
+     * Gets the value of the isUpdatable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsUpdatable() {
+        return isUpdatable;
+    }
+
+    /**
+     * Sets the value of the isUpdatable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsUpdatable(Boolean value) {
+        this.isUpdatable = value;
+    }
+
+    /**
+     * Gets the value of the isRetrievable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsRetrievable() {
+        return isRetrievable;
+    }
+
+    /**
+     * Sets the value of the isRetrievable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsRetrievable(Boolean value) {
+        this.isRetrievable = value;
+    }
+
+    /**
+     * Gets the value of the isQueryable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsQueryable() {
+        return isQueryable;
+    }
+
+    /**
+     * Sets the value of the isQueryable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsQueryable(Boolean value) {
+        this.isQueryable = value;
+    }
+
+    /**
+     * Gets the value of the isFilterable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsFilterable() {
+        return isFilterable;
+    }
+
+    /**
+     * Sets the value of the isFilterable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsFilterable(Boolean value) {
+        this.isFilterable = value;
+    }
+
+    /**
+     * Gets the value of the isPartnerProperty property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsPartnerProperty() {
+        return isPartnerProperty;
+    }
+
+    /**
+     * Sets the value of the isPartnerProperty property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsPartnerProperty(Boolean value) {
+        this.isPartnerProperty = value;
+    }
+
+    /**
+     * Gets the value of the isAccountProperty property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsAccountProperty() {
+        return isAccountProperty;
+    }
+
+    /**
+     * Sets the value of the isAccountProperty property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsAccountProperty(Boolean value) {
+        this.isAccountProperty = value;
+    }
+
+    /**
+     * Gets the value of the partnerMap property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPartnerMap() {
+        return partnerMap;
+    }
+
+    /**
+     * Sets the value of the partnerMap property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPartnerMap(String value) {
+        this.partnerMap = value;
+    }
+
+    /**
+     * Gets the value of the attributeMaps property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the attributeMaps property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAttributeMaps().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link AttributeMap }
+     * 
+     * 
+     */
+    public List<AttributeMap> getAttributeMaps() {
+        if (attributeMaps == null) {
+            attributeMaps = new ArrayList<AttributeMap>();
+        }
+        return this.attributeMaps;
+    }
+
+    /**
+     * Gets the value of the markups property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the markups property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getMarkups().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link APIProperty }
+     * 
+     * 
+     */
+    public List<APIProperty> getMarkups() {
+        if (markups == null) {
+            markups = new ArrayList<APIProperty>();
+        }
+        return this.markups;
+    }
+
+}

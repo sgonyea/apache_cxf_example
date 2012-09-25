@@ -1,0 +1,41 @@
+8
+
+dir
+70
+http://exacttarget.unfuddle.com/svn/exacttarget/code/java/Samples_CXFv202/dist/lib
+http://exacttarget.unfuddle.com/svn/exacttarget
+
+
+
+2007-10-10T15:02:09.564990Z
+70
+exacttarget_egfesser
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8f707c65-5e2c-0410-839c-0b5bac6566ab
+
+Services-test-client.jar
+file
+
+
+
+
+2007-10-18T17:50:08.329250Z
+d5ef32b4f8606808523a2f35eb93d879
+2007-10-10T15:02:09.564990Z
+70
+exacttarget_egfesser
+has-props
+

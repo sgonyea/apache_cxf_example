@@ -1,0 +1,587 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi
+END
+UserAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UserAccess.java
+END
+Soap.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Soap.java
+END
+ContentArea.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ContentArea.java
+END
+Attribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Attribute.java
+END
+PartnerAPI.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/PartnerAPI.java
+END
+SendClassification.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SendClassification.java
+END
+DefinitionRequestMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DefinitionRequestMsg.java
+END
+RetrieveResponseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/RetrieveResponseMsg.java
+END
+CreateRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/CreateRequest.java
+END
+FilterPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/FilterPart.java
+END
+DeleteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DeleteResponse.java
+END
+AccountTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AccountTypeEnum.java
+END
+TriggeredSend.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSend.java
+END
+ClickEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ClickEvent.java
+END
+ClientID.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ClientID.java
+END
+NotSentEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/NotSentEvent.java
+END
+PropertyDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/PropertyDefinition.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ObjectFactory.java
+END
+AsyncResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AsyncResponseType.java
+END
+SubscriberList.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SubscriberList.java
+END
+ListTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ListTypeEnum.java
+END
+PrivateIP.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/PrivateIP.java
+END
+ComplexFilterPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ComplexFilterPart.java
+END
+TriggeredSendSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSendSummary.java
+END
+RetrieveRequestMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/RetrieveRequestMsg.java
+END
+AccountDataItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AccountDataItem.java
+END
+SendSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SendSummary.java
+END
+ExecuteRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ExecuteRequest.java
+END
+UserMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UserMap.java
+END
+QueryRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/QueryRequest.java
+END
+APIProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/APIProperty.java
+END
+DeleteOptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DeleteOptions.java
+END
+EventType.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/EventType.java
+END
+BusinessRule.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/BusinessRule.java
+END
+Subscription.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Subscription.java
+END
+Email.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Email.java
+END
+Owner.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Owner.java
+END
+Account.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Account.java
+END
+QueryObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/QueryObject.java
+END
+ContainerID.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ContainerID.java
+END
+UpdateResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UpdateResponse.java
+END
+DeleteResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DeleteResult.java
+END
+AttributeMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AttributeMap.java
+END
+ForwardedEmailOptInEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ForwardedEmailOptInEvent.java
+END
+TrackingEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TrackingEvent.java
+END
+Query.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Query.java
+END
+SubscriberStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SubscriberStatus.java
+END
+LogicalOperators.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/LogicalOperators.java
+END
+PrivateLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/PrivateLabel.java
+END
+SentEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SentEvent.java
+END
+DeleteRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DeleteRequest.java
+END
+Folder.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Folder.java
+END
+List.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/List.java
+END
+SubscriberSendResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SubscriberSendResult.java
+END
+DefinitionResponseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/DefinitionResponseMsg.java
+END
+ObjectDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ObjectDefinition.java
+END
+VersionInfoResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/VersionInfoResponse.java
+END
+ExecuteRequestMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ExecuteRequestMsg.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/package-info.java
+END
+VersionInfoResponseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/VersionInfoResponseMsg.java
+END
+SimpleOperators.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SimpleOperators.java
+END
+ExecuteResponseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ExecuteResponseMsg.java
+END
+EmailType.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/EmailType.java
+END
+QueryResponseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/QueryResponseMsg.java
+END
+Group.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Group.java
+END
+SendClassificationTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SendClassificationTypeEnum.java
+END
+Link.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Link.java
+END
+RetrieveRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/RetrieveRequest.java
+END
+UpdateOptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UpdateOptions.java
+END
+SurveyEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SurveyEvent.java
+END
+TriggeredSendDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSendDefinition.java
+END
+APIObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/APIObject.java
+END
+PrivateDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/PrivateDomain.java
+END
+CreateResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/CreateResult.java
+END
+SubscriberResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SubscriberResult.java
+END
+OpenEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/OpenEvent.java
+END
+Subscriber.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Subscriber.java
+END
+TriggeredSendCreateResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSendCreateResult.java
+END
+BounceEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/BounceEvent.java
+END
+TriggeredSendTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSendTypeEnum.java
+END
+CreateOptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/CreateOptions.java
+END
+TriggeredSendStatusEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/TriggeredSendStatusEnum.java
+END
+ExecuteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ExecuteResponse.java
+END
+UpdateResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UpdateResult.java
+END
+VersionInfoRequestMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/VersionInfoRequestMsg.java
+END
+CreateResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/CreateResponse.java
+END
+Soap_Soap_Client.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Soap_Soap_Client.java
+END
+SoapImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SoapImpl.java
+END
+QueryRequestMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/QueryRequestMsg.java
+END
+SimpleFilterPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/SimpleFilterPart.java
+END
+ForwardedEmailEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ForwardedEmailEvent.java
+END
+ObjectDefinitionRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/ObjectDefinitionRequest.java
+END
+Send.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/Send.java
+END
+AccountUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AccountUser.java
+END
+UpdateRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UpdateRequest.java
+END
+AsyncResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/AsyncResponse.java
+END
+UnsubEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/src/com/exacttarget/wsdl/partnerapi/UnsubEvent.java
+END

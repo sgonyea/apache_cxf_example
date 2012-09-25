@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib
+END
+WHICH_JARS
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/WHICH_JARS
+END
+wsdl4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/wsdl4j-1.6.1.jar
+END
+stax-utils-20060502.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/stax-utils-20060502.jar
+END
+geronimo-annotation_1.0_spec-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-annotation_1.0_spec-1.1.jar
+END
+geronimo-activation_1.1_spec-1.0-M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-activation_1.1_spec-1.0-M1.jar
+END
+jetty-util-6.1.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jetty-util-6.1.5.jar
+END
+jettison-1.0-RC2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jettison-1.0-RC2.jar
+END
+XmlSchema-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/XmlSchema-1.2.jar
+END
+stax-api-1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/stax-api-1.0.1.jar
+END
+jaxb-impl-2.0.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jaxb-impl-2.0.5.jar
+END
+saaj-api-1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/saaj-api-1.3.jar
+END
+js-1.6R5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/js-1.6R5.jar
+END
+spring-core-2.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/spring-core-2.0.4.jar
+END
+jaxb-api-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jaxb-api-2.0.jar
+END
+commons-logging-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/commons-logging-1.1.jar
+END
+geronimo-jms_1.1_spec-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-jms_1.1_spec-1.1.jar
+END
+xml-resolver-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/xml-resolver-1.2.jar
+END
+jaxws-api-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jaxws-api-2.0.jar
+END
+jaxb-xjc-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jaxb-xjc-2.0.jar
+END
+velocity-dep-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/velocity-dep-1.4.jar
+END
+geronimo-javamail_1.4_spec-1.0-M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-javamail_1.4_spec-1.0-M1.jar
+END
+aopalliance-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/aopalliance-1.0.jar
+END
+jetty-6.1.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jetty-6.1.5.jar
+END
+xalan-2.7.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/xalan-2.7.0.jar
+END
+geronimo-servlet_2.5_spec-1.1-M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-servlet_2.5_spec-1.1-M1.jar
+END
+cxf-manifest-incubator.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/cxf-manifest-incubator.jar
+END
+xml-apis-1.3.02.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/xml-apis-1.3.02.jar
+END
+geronimo-ws-metadata_2.0_spec-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/geronimo-ws-metadata_2.0_spec-1.1.1.jar
+END
+neethi-2.0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/neethi-2.0.2.jar
+END
+wss4j-1.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/wss4j-1.5.1.jar
+END
+spring-web-2.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/spring-web-2.0.4.jar
+END
+saaj-impl-1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/saaj-impl-1.3.jar
+END
+wstx-asl-3.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/wstx-asl-3.2.1.jar
+END
+spring-context-2.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/spring-context-2.0.4.jar
+END
+jdom-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jdom-1.0.jar
+END
+spring-beans-2.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/spring-beans-2.0.4.jar
+END
+slf4j-api-1.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/slf4j-api-1.3.1.jar
+END
+commons-lang-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/commons-lang-2.1.jar
+END
+xmlsec-1.3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/xmlsec-1.3.0.jar
+END
+xbean-2.2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/xbean-2.2.0.jar
+END
+slf4j-jdk14-1.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/slf4j-jdk14-1.3.1.jar
+END
+jra-1.0-alpha-4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jra-1.0-alpha-4.jar
+END
+velocity-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/velocity-1.4.jar
+END
+cxf-2.0.2-incubator.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/cxf-2.0.2-incubator.jar
+END
+servlet-api-2.5-6.1.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/servlet-api-2.5-6.1.5.jar
+END
+jaxen-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/exacttarget/!svn/ver/70/code/java/Samples_CXFv202/lib/jaxen-1.1.jar
+END

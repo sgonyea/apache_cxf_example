@@ -1,0 +1,1161 @@
+<definitions targetNamespace="http://exacttarget.com/wsdl/partnerAPI" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://exacttarget.com/wsdl/partnerAPI">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="http://exacttarget.com/wsdl/partnerAPI" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="APIObject">
+        <sequence>
+          <element name="Client" type="tns:ClientID" minOccurs="0" maxOccurs="1"/>
+          <element name="PartnerKey" type="xsd:string" nillable="true" minOccurs="0" maxOccurs="1"/>
+          <element name="PartnerProperties" type="tns:APIProperty" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="CreatedDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+          <element name="ModifiedDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1" nillable="true"/>
+          <element name="ID" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+          <element name="ObjectID" type="xsd:string" nillable="true" minOccurs="0" maxOccurs="1"/>
+          <element name="CustomerKey" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="Owner" type="tns:Owner" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <complexType name="ClientID">
+        <sequence>
+          <element name="ClientID" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+          <element name="ID" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+          <element name="PartnerClientKey" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="UserID" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+          <element name="PartnerUserKey" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <complexType name="APIProperty">
+        <sequence>
+          <element name="Name" type="xsd:string"/>
+          <element name="Value" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="Owner">
+        <sequence>
+          <element name="Client" type="tns:ClientID" minOccurs="0" maxOccurs="1"/>
+          <element name="FromName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="FromAddress" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <simpleType name="AsyncResponseType">
+        <restriction base="xsd:string">
+          <enumeration value="email"/>
+        </restriction>
+      </simpleType>
+      <complexType name="AsyncResponse">
+        <sequence>
+          <element name="ResponseType" type="tns:AsyncResponseType" minOccurs="1" maxOccurs="1"/>
+          <element name="ResponseAddress" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <complexType name="ContainerID">
+        <sequence>
+          <element name="APIObject" type="tns:APIObject" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="CreateRequest">
+        <complexType>
+          <sequence>
+            <element name="Options" type="tns:CreateOptions" minOccurs="1" maxOccurs="1"/>
+            <element name="Objects" type="tns:APIObject" minOccurs="1" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="CreateResult">
+        <sequence>
+          <element name="OrdinalID" type="xsd:int"/>
+          <element name="StatusCode" type="xsd:string"/>
+          <element name="StatusMessage" type="xsd:string"/>
+          <element name="NewID" type="xsd:int"/>
+          <element name="NewObjectID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="PartnerKey" type="xsd:string" nillable="true" minOccurs="0" maxOccurs="1"/>
+          <element name="Object" type="tns:APIObject"/>
+          <element name="ErrorCode" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="CreateResponse">
+        <complexType>
+          <sequence>
+            <element name="Results" type="tns:CreateResult" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <element name="OverallStatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="CreateOptions">
+        <sequence>
+          <element name="Client" type="tns:ClientID" minOccurs="0" maxOccurs="1"/>
+          <element name="SendResponseTo" type="tns:AsyncResponse" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="Container" type="tns:ContainerID" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="CreateOptions" type="tns:CreateOptions"/>
+      <complexType name="UpdateOptions">
+        <sequence>
+          <element name="Client" type="tns:ClientID" minOccurs="0" maxOccurs="1"/>
+          <element name="SendResponseTo" type="tns:AsyncResponse" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="Container" type="tns:ContainerID" minOccurs="0" maxOccurs="1"/>
+          <element name="Action" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="UpdateOptions" type="tns:UpdateOptions"/>
+      <element name="UpdateRequest">
+        <complexType>
+          <sequence>
+            <element name="Options" type="tns:UpdateOptions" minOccurs="1" maxOccurs="1"/>
+            <element name="Objects" type="tns:APIObject" minOccurs="1" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="UpdateResult">
+        <sequence>
+          <element name="OrdinalID" type="xsd:int"/>
+          <element name="StatusCode" type="xsd:string"/>
+          <element name="StatusMessage" type="xsd:string"/>
+          <element name="Object" type="tns:APIObject"/>
+          <element name="ErrorCode" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="UpdateResponse">
+        <complexType>
+          <sequence>
+            <element name="Results" type="tns:UpdateResult" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <element name="OverallStatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="DeleteOptions">
+        <sequence>
+          <element name="Client" type="tns:ClientID" minOccurs="0" maxOccurs="1"/>
+          <element name="SendResponseTo" type="tns:AsyncResponse" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+      </complexType>
+      <element name="DeleteOptions" type="tns:DeleteOptions"/>
+      <element name="DeleteRequest">
+        <complexType>
+          <sequence>
+            <element name="Options" type="tns:DeleteOptions" minOccurs="1" maxOccurs="1"/>
+            <element name="Objects" type="tns:APIObject" minOccurs="1" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="DeleteResult">
+        <sequence>
+          <element name="OrdinalID" type="xsd:int"/>
+          <element name="StatusCode" type="xsd:string"/>
+          <element name="StatusMessage" type="xsd:string"/>
+          <element name="Object" type="tns:APIObject"/>
+          <element name="ErrorCode" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="DeleteResponse">
+        <complexType>
+          <sequence>
+            <element name="Results" type="tns:DeleteResult" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <element name="OverallStatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="RetrieveRequest">
+        <sequence>
+          <element name="ClientIDs" type="tns:ClientID" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="ObjectType" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <element name="Properties" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="Filter" type="tns:FilterPart" minOccurs="0" maxOccurs="1"/>
+          <element name="RespondTo" type="tns:AsyncResponse" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="PartnerProperties" type="tns:APIProperty" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="ContinueRequest" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="QueryAllAccounts" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+          <element name="RetrieveAllSinceLastBatch" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="RetrieveRequestMsg">
+        <complexType>
+          <sequence>
+            <element name="RetrieveRequest" type="tns:RetrieveRequest" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RetrieveResponseMsg">
+        <complexType>
+          <sequence>
+            <element name="OverallStatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <element name="Results" type="tns:APIObject" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryRequest">
+        <sequence>
+          <element name="ClientIDs" type="tns:ClientID" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="Query" type="tns:Query" minOccurs="1" maxOccurs="1"/>
+          <element name="RespondTo" type="tns:AsyncResponse" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="PartnerProperties" type="tns:APIProperty" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="ContinueRequest" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          <element name="QueryAllAccounts" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+          <element name="RetrieveAllSinceLastBatch" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="QueryRequestMsg">
+        <complexType>
+          <sequence>
+            <element name="QueryRequest" type="tns:QueryRequest" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="QueryResponseMsg">
+        <complexType>
+          <sequence>
+            <element name="OverallStatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <element name="Results" type="tns:APIObject" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryObject">
+        <sequence>
+          <element name="ObjectType" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+          <element name="Properties" minOccurs="1" maxOccurs="unbounded" type="xsd:string"/>
+          <element name="Objects" minOccurs="0" maxOccurs="unbounded" type="tns:QueryObject"/>
+        </sequence>
+      </complexType>
+      <complexType name="Query">
+        <sequence>
+          <element name="Object" minOccurs="1" maxOccurs="1" type="tns:QueryObject"/>
+          <element name="Filter" type="tns:FilterPart" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <complexType name="FilterPart"/>
+      <complexType name="SimpleFilterPart">
+        <complexContent>
+          <extension base="tns:FilterPart">
+            <sequence>
+              <element name="Property" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+              <element name="SimpleOperator" type="tns:SimpleOperators" minOccurs="1" maxOccurs="1"/>
+              <element name="Value" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+              <element name="DateValue" type="xsd:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="ComplexFilterPart">
+        <complexContent>
+          <extension base="tns:FilterPart">
+            <sequence>
+              <element name="LeftOperand" type="tns:FilterPart" minOccurs="1" maxOccurs="1"/>
+              <element name="LogicalOperator" type="tns:LogicalOperators" minOccurs="1" maxOccurs="1"/>
+              <element name="RightOperand" type="tns:FilterPart" minOccurs="0" maxOccurs="1"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <simpleType name="SimpleOperators">
+        <restriction base="xsd:string">
+          <enumeration value="equals"/>
+          <enumeration value="greaterThan"/>
+          <enumeration value="lessThan"/>
+          <enumeration value="isNull"/>
+          <enumeration value="isNotNull"/>
+          <enumeration value="greaterThanOrEqual"/>
+          <enumeration value="lessThanOrEqual"/>
+          <enumeration value="between"/>
+          <enumeration value="IN"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="LogicalOperators">
+        <restriction base="xsd:string">
+          <enumeration value="OR"/>
+          <enumeration value="AND"/>
+        </restriction>
+      </simpleType>
+      <element name="DefinitionRequestMsg">
+        <complexType>
+          <sequence>
+            <element name="ObjectDefinitionRequests" minOccurs="1" maxOccurs="unbounded" type="tns:ObjectDefinitionRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="ObjectDefinitionRequest">
+        <sequence>
+          <element name="Client" minOccurs="1" maxOccurs="1" type="tns:ClientID"/>
+          <element name="ObjectType" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="DefinitionResponseMsg">
+        <complexType>
+          <sequence>
+            <element name="ObjectDefinitions" minOccurs="1" maxOccurs="unbounded" type="tns:ObjectDefinition"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="PropertyDefinition">
+        <sequence>
+          <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="DataType" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="IsCreatable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsUpdatable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsRetrievable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsQueryable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsFilterable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsPartnerProperty" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsAccountProperty" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="PartnerMap" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="AttributeMaps" minOccurs="0" maxOccurs="unbounded" type="tns:AttributeMap"/>
+          <element name="Markups" minOccurs="0" maxOccurs="unbounded" type="tns:APIProperty"/>
+        </sequence>
+      </complexType>
+      <complexType name="ObjectDefinition">
+        <sequence>
+          <element name="ObjectType" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="IsCreatable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsUpdatable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsRetrievable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsQueryable" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="IsReference" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="ReferencedType" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="IsPropertyCollection" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="IsObjectCollection" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+          <element name="Properties" minOccurs="0" maxOccurs="unbounded" type="tns:PropertyDefinition"/>
+          <element name="ChildObjects" minOccurs="0" maxOccurs="unbounded" type="tns:ObjectDefinition"/>
+        </sequence>
+      </complexType>
+      <complexType name="AttributeMap">
+        <complexContent>
+          <extension base="tns:APIProperty">
+            <sequence>
+              <element minOccurs="0" maxOccurs="1" name="EntityName" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="ColumnName" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="ColumnNameMappedTo" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="EntityNameMappedTo" type="xsd:string"/>
+              <element name="AdditionalData" type="tns:APIProperty" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="ExecuteRequest">
+        <sequence>
+          <element name="Client" minOccurs="0" maxOccurs="1" type="tns:ClientID"/>
+          <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="Parameters" minOccurs="0" maxOccurs="unbounded" type="tns:APIProperty"/>
+        </sequence>
+      </complexType>
+      <complexType name="ExecuteResponse">
+        <sequence>
+          <element name="StatusCode" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="StatusMessage" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="OrdinalID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+          <element name="Results" minOccurs="0" maxOccurs="unbounded" type="tns:APIProperty"/>
+          <element name="ErrorCode" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </complexType>
+      <element name="ExecuteRequestMsg">
+        <complexType>
+          <sequence>
+            <element name="Requests" minOccurs="0" maxOccurs="unbounded" type="tns:ExecuteRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ExecuteResponseMsg">
+        <complexType>
+          <sequence>
+            <element name="OverallStatus" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+            <element name="RequestID" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            <element name="Results" minOccurs="0" maxOccurs="unbounded" type="tns:ExecuteResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="VersionInfoResponse">
+        <sequence>
+          <element name="Version" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+          <element name="VersionDate" minOccurs="1" maxOccurs="1" type="xsd:dateTime"/>
+          <element name="Notes" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+          <element name="VersionHistory" minOccurs="0" maxOccurs="unbounded" type="tns:VersionInfoResponse"/>
+        </sequence>
+      </complexType>
+      <element name="VersionInfoRequestMsg">
+        <complexType>
+          <sequence>
+            <element name="IncludeVersionHistory" minOccurs="1" maxOccurs="1" type="xsd:boolean"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="VersionInfoResponseMsg">
+        <complexType>
+          <sequence>
+            <element name="VersionInfo" minOccurs="1" maxOccurs="1" type="tns:VersionInfoResponse"/>
+            <element name="RequestID" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="Account">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="AccountType" type="tns:AccountTypeEnum"/>
+              <element minOccurs="0" maxOccurs="1" name="ParentID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="BrandID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="PrivateLabelID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="ReportingParentID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="Name" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Email" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="FromName" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="BusinessName" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Phone" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Address" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Fax" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="City" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="State" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Zip" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Country" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="IsActive" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="IsTestAccount" type="xsd:boolean"/>
+              <element minOccurs="0" maxOccurs="1" name="OrgID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="unbounded" name="Children" nillable="true" type="tns:AccountDataItem"/>
+              <element minOccurs="0" maxOccurs="1" name="Subscription" nillable="true" type="tns:Subscription"/>
+              <element minOccurs="0" maxOccurs="unbounded" name="PrivateLabels" nillable="true" type="tns:PrivateLabel"/>
+              <element minOccurs="0" maxOccurs="unbounded" name="BusinessRules" nillable="true" type="tns:BusinessRule"/>
+              <element minOccurs="0" maxOccurs="unbounded" name="AccountUsers" nillable="true" type="tns:AccountUser"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <simpleType name="AccountTypeEnum">
+        <restriction base="xsd:string">
+          <enumeration value="None"/>
+          <enumeration value="EXACTTARGET"/>
+          <enumeration value="PRO_CONNECT"/>
+          <enumeration value="CHANNEL_CONNECT"/>
+          <enumeration value="CONNECT"/>
+          <enumeration value="PRO_CONNECT_CLIENT"/>
+          <enumeration value="LP_MEMBER"/>
+          <enumeration value="DOTO_MEMBER"/>
+        </restriction>
+      </simpleType>
+      <complexType name="AccountDataItem">
+        <sequence>
+          <element name="ChildAccountID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+          <element name="BrandID" nillable="true" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+          <element name="PrivateLabelID" nillable="true" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+          <element name="AccountType" nillable="true" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="Subscription">
+        <sequence>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="SubscriptionID" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="EmailsPurchased" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="AccountsPurchased" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="LPAccountsPurchased" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="DOTOAccountsPurchased" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="BeginDate" type="xsd:dateTime"/>
+          <element minOccurs="1" maxOccurs="1" name="EndDate" type="xsd:dateTime"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="Notes" type="xsd:string"/>
+          <element minOccurs="1" maxOccurs="1" name="Period" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="NotificationTitle" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="NotificationMessage" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="NotificationFlag" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="NotificationExpDate" type="xsd:dateTime"/>
+          <element minOccurs="0" maxOccurs="1" nillable="true" name="ForAccounting" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="PrivateLabel">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="Name" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" name="ColorPaletteXML" type="xsd:string"/>
+          <element minOccurs="0" maxOccurs="1" name="LogoFile" type="xsd:string"/>
+          <element minOccurs="1" maxOccurs="1" name="Delete" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="BusinessRule">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Data" type="xsd:int"/>
+          <element minOccurs="1" maxOccurs="1" name="Quality" type="xsd:string"/>
+          <element minOccurs="1" maxOccurs="1" name="Name" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="AccountUser">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element minOccurs="0" maxOccurs="1" nillable="true" name="AccountUserID" type="xsd:int"/>
+              <element minOccurs="1" maxOccurs="1" name="UserID" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="Password" type="xsd:string"/>
+              <element minOccurs="1" maxOccurs="1" name="Name" type="xsd:string"/>
+              <element minOccurs="1" maxOccurs="1" name="Email" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="MustChangePassword" type="xsd:boolean"/>
+              <element minOccurs="0" maxOccurs="1" name="ActiveFlag" type="xsd:boolean"/>
+              <element minOccurs="0" maxOccurs="1" name="ChallengePhrase" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="ChallengeAnswer" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="unbounded" name="UserPermissions" nillable="true" type="tns:UserAccess"/>
+              <element name="Delete" minOccurs="1" maxOccurs="1" default="0" type="xsd:int"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="UserAccess">
+        <sequence>
+          <element name="ID" minOccurs="1" maxOccurs="1" type="xsd:int"/>
+          <element name="Name" nillable="true" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          <element name="Delete" minOccurs="1" maxOccurs="1" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="Email">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Folder" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="CategoryID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="HTMLBody" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="TextBody" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="ContentAreas" type="tns:ContentArea" minOccurs="0" maxOccurs="unbounded"/>
+              <element name="Subject" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="IsActive" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+              <element name="IsHTMLPaste" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+              <element name="ClonedFromID" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+              <element name="Status" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="EmailType" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="CharacterSet" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="HasDynamicSubjectLine" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+              <element name="ContentCheckStatus" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="ContentArea">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Key" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="Content" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+              <element name="IsBlank" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="TrackingEvent">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="SendID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="SubscriberKey" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+              <element name="EventDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="EventType" minOccurs="0" maxOccurs="1" type="tns:EventType"/>
+              <element name="TriggeredSendDefinitionObjectID" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="BatchID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <simpleType name="EventType">
+        <restriction base="xsd:string">
+          <enumeration value="Open"/>
+          <enumeration value="Click"/>
+          <enumeration value="HardBounce"/>
+          <enumeration value="SoftBounce"/>
+          <enumeration value="OtherBounce"/>
+          <enumeration value="Unsubscribe"/>
+          <enumeration value="Sent"/>
+          <enumeration value="NotSent"/>
+          <enumeration value="Survey"/>
+          <enumeration value="ForwardedEmail"/>
+          <enumeration value="ForwardedEmailOptIn"/>
+        </restriction>
+      </simpleType>
+      <complexType name="OpenEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent"/>
+        </complexContent>
+      </complexType>
+      <complexType name="BounceEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent">
+            <sequence>
+              <element name="SMTPCode" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="BounceCategory" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="SMTPReason" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="BounceType" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="UnsubEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent"/>
+        </complexContent>
+      </complexType>
+      <complexType name="ClickEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent">
+            <sequence>
+              <element name="URLID" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="URL" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="SentEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent"/>
+        </complexContent>
+      </complexType>
+      <complexType name="NotSentEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent"/>
+        </complexContent>
+      </complexType>
+      <complexType name="SurveyEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent">
+            <sequence>
+              <element name="Question" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Answer" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="ForwardedEmailEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent"/>
+        </complexContent>
+      </complexType>
+      <complexType name="ForwardedEmailOptInEvent">
+        <complexContent>
+          <extension base="tns:TrackingEvent">
+            <sequence>
+              <element name="OptInSubscriberKey" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="Subscriber">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="EmailAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Attributes" minOccurs="0" maxOccurs="unbounded" type="tns:Attribute"/>
+              <element name="SubscriberKey" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="UnsubscribedDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="Status" minOccurs="0" maxOccurs="1" type="tns:SubscriberStatus"/>
+              <element name="PartnerType" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="EmailTypePreference" minOccurs="0" maxOccurs="1" type="tns:EmailType"/>
+              <element name="Lists" minOccurs="0" maxOccurs="unbounded" type="tns:SubscriberList"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="Subscriber" type="tns:Subscriber"/>
+      <complexType name="Attribute">
+        <sequence>
+          <element name="Name" type="xsd:string"/>
+          <element name="Value" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <simpleType name="SubscriberStatus">
+        <restriction base="xsd:string">
+          <enumeration value="Active"/>
+          <enumeration value="Bounced"/>
+          <enumeration value="Held"/>
+          <enumeration value="Unsubscribed"/>
+          <enumeration value="Deleted"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="EmailType">
+        <restriction base="xsd:string">
+          <enumeration value="Text"/>
+          <enumeration value="HTML"/>
+        </restriction>
+      </simpleType>
+      <complexType name="SubscriberList">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Status" minOccurs="0" maxOccurs="1" type="tns:SubscriberStatus"/>
+              <element name="List" minOccurs="0" maxOccurs="1" type="tns:List"/>
+              <element name="Action" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="SubscriberList" type="tns:SubscriberList"/>
+      <complexType name="List">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="ListName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Category" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="Type" minOccurs="0" maxOccurs="1" type="tns:ListTypeEnum"/>
+              <element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Subscribers" minOccurs="0" maxOccurs="unbounded" type="tns:Subscriber"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="List" type="tns:List"/>
+      <simpleType name="ListTypeEnum">
+        <restriction base="xsd:string">
+          <enumeration value="Public"/>
+          <enumeration value="Private"/>
+          <enumeration value="SalesForce"/>
+        </restriction>
+      </simpleType>
+      <complexType name="Group">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Category" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Subscribers" minOccurs="0" maxOccurs="unbounded" type="tns:Subscriber"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="Group" type="tns:Group"/>
+      <complexType name="Send">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Email" minOccurs="0" maxOccurs="1" type="tns:Email"/>
+              <element name="List" minOccurs="0" maxOccurs="unbounded" type="tns:List"/>
+              <element name="SendDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="FromAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="FromName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Duplicates" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="InvalidAddresses" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="ExistingUndeliverables" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="ExistingUnsubscribes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="HardBounces" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="SoftBounces" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="OtherBounces" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="ForwardedEmails" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="UniqueClicks" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="UniqueOpens" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="NumberSent" minOccurs="0" maxOccurs="1" nillable="true" type="xsd:int"/>
+              <element name="NumberDelivered" minOccurs="0" maxOccurs="1" nillable="true" type="xsd:int"/>
+              <element name="Unsubscribes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="MissingAddresses" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="Subject" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="PreviewURL" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Links" minOccurs="0" maxOccurs="unbounded" type="tns:Link"/>
+              <element name="Events" minOccurs="0" maxOccurs="unbounded" type="tns:TrackingEvent"/>
+              <element name="SentDate" maxOccurs="1" minOccurs="0" nillable="true" type="xsd:dateTime"/>
+              <element name="EmailName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Status" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="IsMultipart" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="SendLimit" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="SendWindowOpen" minOccurs="0" maxOccurs="1" type="xsd:time"/>
+              <element name="SendWindowClose" minOccurs="0" maxOccurs="1" type="xsd:time"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="Send" type="tns:Send"/>
+      <complexType name="Link">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="LastClicked" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="Alias" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="TotalClicks" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="UniqueClicks" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="URL" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Subscribers" minOccurs="0" maxOccurs="unbounded" type="tns:TrackingEvent"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="SendSummary">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element minOccurs="0" maxOccurs="1" name="AccountID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="AccountName" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="AccountEmail" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="IsTestAccount" type="xsd:boolean"/>
+              <element minOccurs="0" maxOccurs="1" name="SendID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="DeliveredTime" type="xsd:string"/>
+              <element minOccurs="0" maxOccurs="1" name="TotalSent" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="Transactional" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="NonTransactional" type="xsd:int"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="TriggeredSendDefinition">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="TriggeredSendType" minOccurs="0" maxOccurs="1" type="tns:TriggeredSendTypeEnum"/>
+              <element name="TriggeredSendStatus" minOccurs="0" maxOccurs="1" type="tns:TriggeredSendStatusEnum"/>
+              <element name="Email" minOccurs="0" maxOccurs="1" type="tns:Email"/>
+              <element name="List" minOccurs="0" maxOccurs="1" type="tns:List"/>
+              <element name="HeaderContentArea" minOccurs="0" maxOccurs="1" type="tns:ContentArea"/>
+              <element name="FooterContentArea" minOccurs="0" maxOccurs="1" type="tns:ContentArea"/>
+              <element name="SendClassification" minOccurs="0" maxOccurs="1" type="tns:SendClassification"/>
+              <element name="PrivateDomain" minOccurs="0" maxOccurs="1" type="tns:PrivateDomain"/>
+              <element name="PrivateIP" minOccurs="0" maxOccurs="1" type="tns:PrivateIP"/>
+              <element name="AutoAddSubscribers" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="AutoUpdateSubscribers" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="BatchInterval" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="FromName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="FromAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="BccEmail" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="EmailSubject" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="DynamicEmailSubject" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="IsMultipart" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="IsWrapped" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="AllowedSlots" minOccurs="0" maxOccurs="1" type="xsd:short"/>
+              <element name="NewSlotTrigger" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="SendLimit" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="SendWindowOpen" minOccurs="0" maxOccurs="1" type="xsd:time"/>
+              <element name="SendWindowClose" minOccurs="0" maxOccurs="1" type="xsd:time"/>
+              <element name="SendWindowDelete" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="SuppressTracking" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="Keyword" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="RefreshContent" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="TriggeredSendDefinition" type="tns:TriggeredSendDefinition"/>
+      <simpleType name="TriggeredSendTypeEnum">
+        <restriction base="xsd:string">
+          <enumeration value="Continuous"/>
+          <enumeration value="Batched"/>
+          <enumeration value="Scheduled"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="TriggeredSendStatusEnum">
+        <restriction base="xsd:string">
+          <enumeration value="New"/>
+          <enumeration value="Inactive"/>
+          <enumeration value="Active"/>
+          <enumeration value="Canceled"/>
+          <enumeration value="Deleted"/>
+        </restriction>
+      </simpleType>
+      <complexType name="SendClassification">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="SendClassificationType" minOccurs="0" maxOccurs="1" type="tns:SendClassificationTypeEnum"/>
+              <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="FromName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="FromAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="IsMultipart" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="IsWrapped" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="HeaderContentArea" minOccurs="0" maxOccurs="1" type="tns:ContentArea"/>
+              <element name="FooterContentArea" minOccurs="0" maxOccurs="1" type="tns:ContentArea"/>
+              <element name="PrivateDomain" minOccurs="0" maxOccurs="1" type="tns:PrivateDomain"/>
+              <element name="PrivateIP" minOccurs="0" maxOccurs="1" type="tns:PrivateIP"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="SendClassification" type="tns:SendClassification"/>
+      <complexType name="PrivateDomain">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <!--<sequence>
+                  <element name="ToBeDefined" minOccurs="0" maxOccurs="1" type="xsd:string"></element>
+            </sequence>-->
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="PrivateDomain" type="tns:PrivateDomain"/>
+      <complexType name="PrivateIP">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="Description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="IsActive" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <element name="OrdinalID" minOccurs="0" maxOccurs="1" type="xsd:short"/>
+              <element name="IPAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="PrivateIP" type="tns:PrivateIP"/>
+      <simpleType name="SendClassificationTypeEnum">
+        <restriction base="xsd:string">
+          <enumeration value="Operational"/>
+          <enumeration value="Marketing"/>
+        </restriction>
+      </simpleType>
+      <complexType name="TriggeredSend">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="TriggeredSendDefinition" minOccurs="1" maxOccurs="1" type="tns:TriggeredSendDefinition"/>
+              <element name="Subscribers" minOccurs="1" maxOccurs="unbounded" type="tns:Subscriber"/>
+              <element name="Attributes" minOccurs="0" maxOccurs="unbounded" type="tns:Attribute"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="TriggeredSend" type="tns:TriggeredSend"/>
+      <complexType name="TriggeredSendCreateResult">
+        <complexContent>
+          <extension base="tns:CreateResult">
+            <sequence>
+              <element name="SubscriberFailures" minOccurs="0" maxOccurs="unbounded" type="tns:SubscriberResult"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="TriggeredSendCreateResult" type="tns:TriggeredSendCreateResult"/>
+      <complexType name="SubscriberResult">
+        <sequence>
+          <element name="Subscriber" minOccurs="1" maxOccurs="1" type="tns:Subscriber"/>
+          <element name="ErrorCode" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+          <element name="ErrorDescription" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="SubscriberResult" type="tns:SubscriberResult"/>
+      <complexType name="SubscriberSendResult">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="Send" minOccurs="0" maxOccurs="1" type="tns:Send"/>
+              <element name="Email" minOccurs="0" maxOccurs="1" type="tns:Email"/>
+              <element name="Subscriber" minOccurs="0" maxOccurs="1" type="tns:Subscriber"/>
+              <element name="ClickDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="BounceDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="OpenDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="SentDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="LastAction" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="UnsubscribeDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+              <element name="FromAddress" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="FromName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="TotalClicks" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="UniqueClicks" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <element name="Subject" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <element name="ViewSentEmailURL" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="TriggeredSendSummary">
+        <complexContent>
+          <extension base="tns:APIObject">
+            <sequence>
+              <element name="TriggeredSendDefinition" minOccurs="0" maxOccurs="1" type="tns:TriggeredSendDefinition"/>
+              <element name="Sent" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="NotSentDueToOptOut" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="NotSentDueToUndeliverable" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="Bounces" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="Opens" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="Clicks" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="UniqueOpens" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="UniqueClicks" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="OptOuts" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="SurveyResponses" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="FTAFRequests" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="FTAFEmailsSent" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="FTAFOptIns" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="Conversions" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="UniqueConversions" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="InProcess" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+              <element name="NotSentDueToError" minOccurs="0" maxOccurs="1" type="xsd:long"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="UserMap">
+        <complexContent>
+          <extension base="tns:APIProperty">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="ETAccountUser" type="tns:AccountUser"/>
+              <element name="AdditionalData" type="tns:APIProperty" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <complexType name="Folder">
+        <complexContent>
+          <extension base="tns:APIProperty">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="ID" type="xsd:int"/>
+              <element minOccurs="0" maxOccurs="1" name="ParentID" type="xsd:int"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+    </schema>
+  </types>
+  <message name="createRequest">
+    <part element="tns:CreateRequest" name="parameters"/>
+  </message>
+  <message name="createResponse">
+    <part element="tns:CreateResponse" name="parameters"/>
+  </message>
+  <message name="retrieveRequest">
+    <part element="tns:RetrieveRequestMsg" name="parameters"/>
+  </message>
+  <message name="retrieveResponse">
+    <part element="tns:RetrieveResponseMsg" name="parameters"/>
+  </message>
+  <message name="updateRequest">
+    <part element="tns:UpdateRequest" name="parameters"/>
+  </message>
+  <message name="updateResponse">
+    <part element="tns:UpdateResponse" name="parameters"/>
+  </message>
+  <message name="deleteRequest">
+    <part element="tns:DeleteRequest" name="parameters"/>
+  </message>
+  <message name="deleteResponse">
+    <part element="tns:DeleteResponse" name="parameters"/>
+  </message>
+  <message name="queryRequest">
+    <part element="tns:QueryRequestMsg" name="parameters"/>
+  </message>
+  <message name="queryResponse">
+    <part element="tns:QueryResponseMsg" name="parameters"/>
+  </message>
+  <message name="definitionRequest">
+    <part element="tns:DefinitionRequestMsg" name="parameters"/>
+  </message>
+  <message name="definitionResponse">
+    <part element="tns:DefinitionResponseMsg" name="parameters"/>
+  </message>
+  <message name="executeRequest">
+    <part element="tns:ExecuteRequestMsg" name="parameters"/>
+  </message>
+  <message name="executeResponse">
+    <part element="tns:ExecuteResponseMsg" name="parameters"/>
+  </message>
+  <message name="versionInfoRequest">
+    <part element="tns:VersionInfoRequestMsg" name="parameters"/>
+  </message>
+  <message name="versionInfoResponse">
+    <part element="tns:VersionInfoResponseMsg" name="parameters"/>
+  </message>
+  <portType name="Soap">
+    <operation name="Create">
+      <documentation>Create objects</documentation>
+      <input message="tns:createRequest"/>
+      <output message="tns:createResponse"/>
+    </operation>
+    <operation name="Retrieve">
+      <documentation>Retrieve objects</documentation>
+      <input message="tns:retrieveRequest"/>
+      <output message="tns:retrieveResponse"/>
+    </operation>
+    <operation name="Update">
+      <documentation>Update objects</documentation>
+      <input message="tns:updateRequest"/>
+      <output message="tns:updateResponse"/>
+    </operation>
+    <operation name="Delete">
+      <documentation>Delete objects</documentation>
+      <input message="tns:deleteRequest"/>
+      <output message="tns:deleteResponse"/>
+    </operation>
+    <operation name="Query">
+      <input message="tns:queryRequest"/>
+      <output message="tns:queryResponse"/>
+    </operation>
+    <operation name="Describe">
+      <input message="tns:definitionRequest"/>
+      <output message="tns:definitionResponse"/>
+    </operation>
+    <operation name="Execute">
+      <input message="tns:executeRequest"/>
+      <output message="tns:executeResponse"/>
+    </operation>
+    <operation name="VersionInfo">
+      <input message="tns:versionInfoRequest"/>
+      <output message="tns:versionInfoResponse"/>
+    </operation>
+  </portType>
+  <binding name="SoapBinding" type="tns:Soap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Create">
+      <soap:operation soapAction="Create"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Retrieve">
+      <soap:operation soapAction="Retrieve"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Update">
+      <soap:operation soapAction="Update"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Delete">
+      <soap:operation soapAction="Delete"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Query">
+      <soap:operation soapAction="Query"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Describe">
+      <soap:operation soapAction="Describe"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Execute">
+      <soap:operation soapAction="Execute"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VersionInfo">
+      <soap:operation soapAction="VersionInfo"/>
+      <input>
+        <soap:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="PartnerAPI">
+    <documentation>ExactTarget Partner API</documentation>
+    <port binding="tns:SoapBinding" name="Soap">
+      <soap:address location="https://webservice.exacttarget.com/Service.asmx"/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,110 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for BusinessRule complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="BusinessRule">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Data" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="Quality" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "BusinessRule", propOrder = {
+    "data",
+    "quality",
+    "name"
+})
+public class BusinessRule {
+
+    @XmlElement(name = "Data", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected int data;
+    @XmlElement(name = "Quality", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected String quality;
+    @XmlElement(name = "Name", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected String name;
+
+    /**
+     * Gets the value of the data property.
+     * 
+     */
+    public int getData() {
+        return data;
+    }
+
+    /**
+     * Sets the value of the data property.
+     * 
+     */
+    public void setData(int value) {
+        this.data = value;
+    }
+
+    /**
+     * Gets the value of the quality property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getQuality() {
+        return quality;
+    }
+
+    /**
+     * Sets the value of the quality property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setQuality(String value) {
+        this.quality = value;
+    }
+
+    /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+}

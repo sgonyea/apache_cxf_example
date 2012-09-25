@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <!-- user/password for WSS4J -->
+    <entry key="user">ccc</entry>
+    <entry key="password">ccc</entry>
+    
+    <!-- TriggeredSend information for test3 -->
+    <entry key="customerKey">TEXTEXT</entry>
+    <entry key="validEmailAddress">test@bh.exacttarget.com</entry>
+    <entry key="validSubscriberKey">test@bh.exacttarget.com</entry>
+    <entry key="validFromAddress">test@bh.exacttarget.com</entry>
+    <entry key="validFromName">From Address 1</entry>
+    <entry key="invalidEmailAddress">invalid.com</entry>
+    <entry key="invalidSubscriberKey">t@est@bh.exacttarget.com</entry>
+    <entry key="invalidFromAddress">t@est@bh.exacttarget.com</entry>
+    <entry key="invalidFromName">From Address 2</entry>
+</properties>

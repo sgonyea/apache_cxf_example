@@ -1,0 +1,244 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for CreateResult complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CreateResult">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="OrdinalID" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="StatusCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="StatusMessage" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="NewID" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="NewObjectID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="PartnerKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Object" type="{http://exacttarget.com/wsdl/partnerAPI}APIObject"/>
+ *         &lt;element name="ErrorCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CreateResult", propOrder = {
+    "ordinalID",
+    "statusCode",
+    "statusMessage",
+    "newID",
+    "newObjectID",
+    "partnerKey",
+    "object",
+    "errorCode"
+})
+public class CreateResult {
+
+    @XmlElement(name = "OrdinalID", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected int ordinalID;
+    @XmlElement(name = "StatusCode", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected String statusCode;
+    @XmlElement(name = "StatusMessage", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected String statusMessage;
+    @XmlElement(name = "NewID", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected int newID;
+    @XmlElement(name = "NewObjectID", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected String newObjectID;
+    @XmlElementRef(name = "PartnerKey", namespace = "http://exacttarget.com/wsdl/partnerAPI", type = JAXBElement.class)
+    protected JAXBElement<String> partnerKey;
+    @XmlElement(name = "Object", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected APIObject object;
+    @XmlElement(name = "ErrorCode", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected Integer errorCode;
+
+    /**
+     * Gets the value of the ordinalID property.
+     * 
+     */
+    public int getOrdinalID() {
+        return ordinalID;
+    }
+
+    /**
+     * Sets the value of the ordinalID property.
+     * 
+     */
+    public void setOrdinalID(int value) {
+        this.ordinalID = value;
+    }
+
+    /**
+     * Gets the value of the statusCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    /**
+     * Sets the value of the statusCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStatusCode(String value) {
+        this.statusCode = value;
+    }
+
+    /**
+     * Gets the value of the statusMessage property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStatusMessage() {
+        return statusMessage;
+    }
+
+    /**
+     * Sets the value of the statusMessage property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStatusMessage(String value) {
+        this.statusMessage = value;
+    }
+
+    /**
+     * Gets the value of the newID property.
+     * 
+     */
+    public int getNewID() {
+        return newID;
+    }
+
+    /**
+     * Sets the value of the newID property.
+     * 
+     */
+    public void setNewID(int value) {
+        this.newID = value;
+    }
+
+    /**
+     * Gets the value of the newObjectID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNewObjectID() {
+        return newObjectID;
+    }
+
+    /**
+     * Sets the value of the newObjectID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNewObjectID(String value) {
+        this.newObjectID = value;
+    }
+
+    /**
+     * Gets the value of the partnerKey property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPartnerKey() {
+        return partnerKey;
+    }
+
+    /**
+     * Sets the value of the partnerKey property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPartnerKey(JAXBElement<String> value) {
+        this.partnerKey = ((JAXBElement<String> ) value);
+    }
+
+    /**
+     * Gets the value of the object property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link APIObject }
+     *     
+     */
+    public APIObject getObject() {
+        return object;
+    }
+
+    /**
+     * Sets the value of the object property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link APIObject }
+     *     
+     */
+    public void setObject(APIObject value) {
+        this.object = value;
+    }
+
+    /**
+     * Gets the value of the errorCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getErrorCode() {
+        return errorCode;
+    }
+
+    /**
+     * Sets the value of the errorCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setErrorCode(Integer value) {
+        this.errorCode = value;
+    }
+
+}

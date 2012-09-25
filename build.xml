@@ -1,0 +1,71 @@
+<project basedir=".">
+	<property name="build.dir" value="build"/>
+	<property name="lib.dir" value="lib"/>
+	<property name="resources.dir" value="resources"/>
+	<property name="src.dir" value="src"/>
+	<property name="dist.dir" value="dist"/>
+	<property name="config.dir" value="config"/>
+	
+    <path id="cxf.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="client.lib.classpath">
+        <fileset dir="${dist.dir}/lib" >
+            <include name="*.jar" />
+        </fileset>      
+    	<fileset dir="${basedir}">
+    	    <include name="cxf.xml"/>
+    	</fileset>
+    </path> 	
+	
+    <target name="init">
+    	<property file="${basedir}/cxfv202-client-test-properties.xml"/>
+        <mkdir dir="${build.dir}"/>
+    	<mkdir dir="${dist.dir}/lib"/>
+    </target>
+
+    <target name="generate.client" depends="init">
+    	<java classname="org.apache.cxf.tools.wsdlto.WSDLToJava" fork="true">
+    		<arg value="-compile"/>
+    		<arg value="-impl"/> <!-- necessary for javax.jws.WebService annotation -->
+    		<arg value="-classdir"/>
+    		<arg value="${build.dir}"/>
+            <arg value="-client"/>
+    		<arg value="-d"/>
+    		<arg value="src"/>
+    		<arg value="${resources.dir}/META-INF/etframework.wsdl"/>
+    		<classpath>
+                <path refid="cxf.classpath"/>
+            </classpath>
+    	</java>       	
+    </target>
+
+    <target name="compile.client">
+        <javac destdir="${build.dir}"
+               debug="true"
+               failonerror="true">
+               <src path="${src.dir}/com/exacttarget/samples/CXFv202/client"/>
+               <classpath refid="cxf.classpath"/>
+        </javac>
+        <jar destfile="${dist.dir}/lib/Services-test-client.jar"
+             basedir="${build.dir}">
+        </jar>
+    </target>
+
+    <target name="generate.compile.client" depends="generate.client,compile.client"/>
+	
+    <target name="run.client">
+        <java classname="com.exacttarget.samples.CXFv202.client.ClientTest" fork="yes">
+            <classpath refid="client.lib.classpath" />
+            <classpath refid="cxf.classpath" />        
+        	<jvmarg value="-Djava.util.logging.config.file=logging.properties"/>
+        </java>
+    </target>   
+	
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+</project>

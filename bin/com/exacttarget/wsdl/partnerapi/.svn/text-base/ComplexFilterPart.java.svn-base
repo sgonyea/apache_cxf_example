@@ -1,0 +1,120 @@
+
+package com.exacttarget.wsdl.partnerapi;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for ComplexFilterPart complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ComplexFilterPart">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://exacttarget.com/wsdl/partnerAPI}FilterPart">
+ *       &lt;sequence>
+ *         &lt;element name="LeftOperand" type="{http://exacttarget.com/wsdl/partnerAPI}FilterPart"/>
+ *         &lt;element name="LogicalOperator" type="{http://exacttarget.com/wsdl/partnerAPI}LogicalOperators"/>
+ *         &lt;element name="RightOperand" type="{http://exacttarget.com/wsdl/partnerAPI}FilterPart" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ComplexFilterPart", propOrder = {
+    "leftOperand",
+    "logicalOperator",
+    "rightOperand"
+})
+public class ComplexFilterPart
+    extends FilterPart
+{
+
+    @XmlElement(name = "LeftOperand", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected FilterPart leftOperand;
+    @XmlElement(name = "LogicalOperator", namespace = "http://exacttarget.com/wsdl/partnerAPI", required = true)
+    protected LogicalOperators logicalOperator;
+    @XmlElement(name = "RightOperand", namespace = "http://exacttarget.com/wsdl/partnerAPI")
+    protected FilterPart rightOperand;
+
+    /**
+     * Gets the value of the leftOperand property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link FilterPart }
+     *     
+     */
+    public FilterPart getLeftOperand() {
+        return leftOperand;
+    }
+
+    /**
+     * Sets the value of the leftOperand property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FilterPart }
+     *     
+     */
+    public void setLeftOperand(FilterPart value) {
+        this.leftOperand = value;
+    }
+
+    /**
+     * Gets the value of the logicalOperator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link LogicalOperators }
+     *     
+     */
+    public LogicalOperators getLogicalOperator() {
+        return logicalOperator;
+    }
+
+    /**
+     * Sets the value of the logicalOperator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LogicalOperators }
+     *     
+     */
+    public void setLogicalOperator(LogicalOperators value) {
+        this.logicalOperator = value;
+    }
+
+    /**
+     * Gets the value of the rightOperand property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link FilterPart }
+     *     
+     */
+    public FilterPart getRightOperand() {
+        return rightOperand;
+    }
+
+    /**
+     * Sets the value of the rightOperand property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FilterPart }
+     *     
+     */
+    public void setRightOperand(FilterPart value) {
+        this.rightOperand = value;
+    }
+
+}
